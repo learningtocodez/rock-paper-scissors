@@ -20,26 +20,26 @@ let draw = 0; //starts out as this, which it does currently.
 //Player selection string "rock, paper, scissors";
 const playerSelection = prompt("rock, paper, scissors");
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+//console.log(playRound(playerSelection, computerSelection));
 
 //Write a function that plays a single round of rock paper scissors;
 //The function should take two parameters, playerSelection and computerSelection;
 //return a string that declares the winner of the round example: "You Lose! computerSelection beats playersSelection";
 function playRound(playerSelection,computerSelection) {
       if (playerSelection === "rock" && computerSelection === "scissors") {
-        console.log(`Winner rock beats scissors`);
+        console.log(`Winner rock beats scissors` && playScore++);
         return `Winner rock beats scissors` && playScore++;   
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        console.log(`Winner paper beats rock`);
+        console.log(`Winner paper beats rock` && playScore++);
         return `Winner paper beats rock` && playScore++;
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        console.log(`Winner scissors beat paper`)
+        console.log(`Winner scissors beat paper` && playScore++)
         return `Winner scissors beat paper` && playScore++;
     } else if (playerSelection === computerSelection) {
         console.log(`draw`);
         return `draw ${playerSelection} && ${computerSelection}`;
     } else { 
-        console.log(`You lose! ${computerSelection} beats ${playerSelection}`)
+        console.log(`You lose! ${computerSelection} beats ${playerSelection}` && computerScore++);
         return`You lose! ${computerSelection} beats ${playerSelection}` && computerScore++;
 }    
 }
@@ -48,15 +48,11 @@ function playRound(playerSelection,computerSelection) {
 
 function game() {
     for (let i = 0; i < 5; i++) {
-    console.log(playScore++, computerScore++);
-     playRound(playerSelection, computerSelection);
+    playRound(playerSelection, computerSelection);
     } 
 }
 //console.log(++playScore);
 //console.log(++computerScore);
 
-game(playerSelection, computerSelection);{
-   playScore;
-   computerScore;
-}
+game();
    
