@@ -27,27 +27,36 @@ console.log(playRound(playerSelection, computerSelection));
 //return a string that declares the winner of the round example: "You Lose! computerSelection beats playersSelection";
 function playRound(playerSelection,computerSelection) {
       if (playerSelection === "rock" && computerSelection === "scissors") {
-        return `Winner rock beats scissors` && ++playScore;
+        console.log(`Winner rock beats scissors`);
+        return `Winner rock beats scissors` && playScore++;   
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        return `Winner paper beats rock` && ++playScore;
+        console.log(`Winner paper beats rock`);
+        return `Winner paper beats rock` && playScore++;
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        return `Winner scissors beat paper` && ++playScore;
+        console.log(`Winner scissors beat paper`)
+        return `Winner scissors beat paper` && playScore++;
     } else if (playerSelection === computerSelection) {
+        console.log(`draw`);
         return `draw ${playerSelection} && ${computerSelection}`;
-    } else { return`You lose! ${computerSelection} beats ${playerSelection}` && ++computerScore
+    } else { 
+        console.log(`You lose! ${computerSelection} beats ${playerSelection}`)
+        return`You lose! ${computerSelection} beats ${playerSelection}` && computerScore++;
 }    
 }
+//console.log(playerSelection, computerSelection);
+//ABOVE ISSUE WRITING IS NOT PRINTING OUT NOW MAYBE CHANGE ++ TO OLD WAY TO SEE IF THAT RESOLVES IT.
+
 function game() {
     for (let i = 0; i < 5; i++) {
+    console.log(playScore++, computerScore++);
      playRound(playerSelection, computerSelection);
-       
     } 
 }
-console.log(++playScore);
-console.log(++computerScore);
+//console.log(++playScore);
+//console.log(++computerScore);
 
-game();{
-   ++playScore;
-   ++computerScore;
+game(playerSelection, computerSelection);{
+   playScore;
+   computerScore;
 }
    
