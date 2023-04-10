@@ -17,9 +17,10 @@ let draw = 0; //starts out as this, which it does currently.
 //console.log(playScore);
 //console.log(computerScore);
 
+
 //Player selection string "rock, paper, scissors";
-const playerSelection = prompt("rock, paper, scissors");
-const computerSelection = getComputerChoice();
+//const playerSelection = prompt("rock, paper, scissors");
+//const computerSelection = getComputerChoice();
 //console.log(playRound(playerSelection, computerSelection));
 
 //Write a function that plays a single round of rock paper scissors;
@@ -46,17 +47,18 @@ function playRound(playerSelection,computerSelection) {
 //console.log(playerSelection, computerSelection);
 //ABOVE ISSUE WRITING IS NOT PRINTING OUT NOW MAYBE CHANGE ++ TO OLD WAY TO SEE IF THAT RESOLVES IT.
 
+
+
 function game() {
     for (let i = 0; i < 5; i++) {
-   // playRound(playerSelection, computerSelection);
+    let playerSelection = prompt("rock, paper, scissors");
+    let computerSelection = getComputerChoice();
     console.log(playRound(playerSelection, computerSelection));
     } 
 }
+
 //console.log(++playScore);
 //console.log(++computerScore);
 
-game(); {
-    //"homework. Think about where we need to ask the player and the computer....
-    // to give us our selection for the round"
-}
-   
+game();
+//"Think about where to ask the player and the computer to give us our selection for the round"
