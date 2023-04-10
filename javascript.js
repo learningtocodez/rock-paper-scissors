@@ -29,19 +29,23 @@ let draw = 0; //starts out as this, which it does currently.
 function playRound(playerSelection,computerSelection) {
       if (playerSelection === "rock" && computerSelection === "scissors") {
     //    console.log(`Winner rock beats scissors` && playScore++);
-        return `Winner rock beats scissors` && ++playScore;   
+        ++playScore
+        return `Winner rock beats scissors`;   
     } else if (playerSelection === "paper" && computerSelection === "rock") {
     //    console.log(`Winner paper beats rock` && playScore++);
-        return `Winner paper beats rock` && ++playScore;
+        ++playScore
+        return `Winner paper beats rock`;
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
     //    console.log(`Winner scissors beat paper` && playScore++)
-        return `Winner scissors beat paper` && ++playScore;
+        ++playScore
+        return `Winner scissors beat paper`;
     } else if (playerSelection === computerSelection) {
     //    console.log(`draw`);
         return `draw ${playerSelection} && ${computerSelection}`;
     } else { 
     //    console.log(`You lose! ${computerSelection} beats ${playerSelection}` && computerScore++);
-        return`You lose! ${computerSelection} beats ${playerSelection}` && ++computerScore;
+        ++computerScore
+        return`You lose! ${computerSelection} beats ${playerSelection}`;
 }    
 }
 //console.log(playerSelection, computerSelection);
