@@ -28,19 +28,19 @@ const computerSelection = getComputerChoice();
 function playRound(playerSelection,computerSelection) {
       if (playerSelection === "rock" && computerSelection === "scissors") {
     //    console.log(`Winner rock beats scissors` && playScore++);
-        return `Winner rock beats scissors` && playScore++;   
+        return `Winner rock beats scissors` && ++playScore;   
     } else if (playerSelection === "paper" && computerSelection === "rock") {
     //    console.log(`Winner paper beats rock` && playScore++);
-        return `Winner paper beats rock` && playScore++;
+        return `Winner paper beats rock` && ++playScore;
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
     //    console.log(`Winner scissors beat paper` && playScore++)
-        return `Winner scissors beat paper` && playScore++;
+        return `Winner scissors beat paper` && ++playScore;
     } else if (playerSelection === computerSelection) {
     //    console.log(`draw`);
         return `draw ${playerSelection} && ${computerSelection}`;
     } else { 
     //    console.log(`You lose! ${computerSelection} beats ${playerSelection}` && computerScore++);
-        return`You lose! ${computerSelection} beats ${playerSelection}` && computerScore++;
+        return`You lose! ${computerSelection} beats ${playerSelection}` && ++computerScore;
 }    
 }
 //console.log(playerSelection, computerSelection);
@@ -55,5 +55,8 @@ function game() {
 //console.log(++playScore);
 //console.log(++computerScore);
 
-game();
+game(); {
+    //"homework. Think about where we need to ask the player and the computer....
+    // to give us our selection for the round"
+}
    
