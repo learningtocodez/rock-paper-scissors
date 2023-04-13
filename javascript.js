@@ -29,24 +29,24 @@ let draw = 0; //starts out as this, which it does currently.
 function playRound(playerSelection,computerSelection) {
       if (playerSelection === "rock" && computerSelection === "scissors") {
     //    console.log(`Winner rock beats scissors` && playScore++);
-        ++playScore
+        ++playScore;
         return `Winner rock beats scissors`;   
     } else if (playerSelection === "paper" && computerSelection === "rock") {
     //    console.log(`Winner paper beats rock` && playScore++);
-        ++playScore
+        ++playScore;
         return `Winner paper beats rock`;
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
     //    console.log(`Winner scissors beat paper` && playScore++)
-        ++playScore
+        ++playScore;
         return `Winner scissors beat paper`;
     } else if (playerSelection === computerSelection) {
     //    console.log(`draw`);
         return `draw ${playerSelection} && ${computerSelection}`;
     } else { 
     //    console.log(`You lose! ${computerSelection} beats ${playerSelection}` && computerScore++);
-        ++computerScore
+        ++computerScore;
         return`You lose! ${computerSelection} beats ${playerSelection}`;
-}    
+}
 }
 //console.log(playerSelection, computerSelection);
 //ABOVE ISSUE WRITING IS NOT PRINTING OUT NOW MAYBE CHANGE ++ TO OLD WAY TO SEE IF THAT RESOLVES IT.
@@ -55,14 +55,52 @@ function playRound(playerSelection,computerSelection) {
 
 function game() {
     for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt("rock, paper, scissors");
-    let computerSelection = getComputerChoice();
+    const playerSelection = prompt("Begin game select 'Rock, Paper, Scissors'");
+    const computerSelection = getComputerChoice();
     console.log(playRound(playerSelection, computerSelection));
     } 
 }
 
+game();
+    if (playScore === 5) {
+    console.log("Game over player wins!");
+    }else{ (computerScore === 5) 
+    console.log("Game over computer wins!");    
+}
+    
 //console.log(++playScore);
 //console.log(++computerScore);
 
-game();
-//"Think about where to ask the player and the computer to give us our selection for the round"
+//Calling game, needs to be done outside of the function itself so you know when it starts.
+
+//pseudo code below.
+/*
+Work out who wins the game, playerSelection || computerSelection.
+
+How to write the winner of the game after five rounds in javascript? <<Proper question in pseudo code 
+
+Display winner at the end of 5 rounds.
+
+If the player enters incorrect words or information game needs to return or console.log error msg.
+*/
+
+
+//Bugs pseudo code.
+/*
+What do I need from my program in order to determine who wins the game?
+
+How would my victory message look in Javascript? Should it be called upon via my victory function / condition?
+
+What are the few acceptable answers from User Input (our biggest potential for errors) rendering the rest as an immediate discard?
+*/
+
+//Do second issue figure out how to stop incorrect things been added.
+/*
+Javascript how to work out who has won the total amount of games of rock paper scissors
+ and display it at the end of the game?
+
+
+1. We need to work out who's won the game and display the winner at the end of the 5 rounds.
+
+2. figure out what we want to do if player enters sandpaper, or egg, or ROCK, or nothing, or clicks cancel.
+*/
