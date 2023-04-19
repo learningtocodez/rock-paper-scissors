@@ -29,30 +29,22 @@ let draw = 0; //starts out as this, which it does currently.
 //return a string that declares the winner of the round example: "You Lose! computerSelection beats playersSelection";
 function playRound(playerSelection,computerSelection) {
       if (playerSelection === "rock" && computerSelection === "scissors") {
-        console.log(`Winner rock beats scissors` && playScore++);
-//        console.log(++playScore);
+        console.log(++playScore);
         return `Winner rock beats scissors`;   
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        console.log(`Winner paper beats rock` && playScore++);
-//        console.log(++playScore);
-        return `Winner paper beats rock`;
+        console.log(++playScore);
+        return `Winner paper beats rock`; 
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        console.log(`Winner scissors beat paper` && playScore++)
-//        console.log(++playScore);
-        return `Winner scissors beat paper`;
+        console.log(++playScore);
+        return `Winner scissors beat paper`; 
     } else if (playerSelection === computerSelection) {
-//        console.log(draw);
+        console.log(draw);
         return `draw ${playerSelection} && ${computerSelection}`;
     } else { 
-        console.log(`You lose! ${computerSelection} beats ${playerSelection}` && computerScore++);
-//        console.log(++computerScore);
+        console.log(++computerScore);
         return`You lose! ${computerSelection} beats ${playerSelection}`;
 }
 }
-//console.log(playerSelection, computerSelection);
-//ABOVE ISSUE WRITING IS NOT PRINTING OUT NOW MAYBE CHANGE ++ TO OLD WAY TO SEE IF THAT RESOLVES IT.
-
-
 
 function game() {
     for (let i = 0; i < 5; i++) {
