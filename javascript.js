@@ -47,7 +47,7 @@ function game() {
       while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
         playerSelection = prompt("WARNING!! rock, paper, scissors choice only");      
     }
-        const computerSelection = getComputerChoice();
+      const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
     } 
 }
