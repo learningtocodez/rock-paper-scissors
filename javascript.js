@@ -17,19 +17,24 @@ let draw = 0;
 //return a string that declares the winner of the round example: "You Lose! computerSelection beats playersSelection";
 function playRound(playerSelection,computerSelection) {
       if (playerSelection === "rock" && computerSelection === "scissors") {
-        console.log(++playScore);
+        ++playScore
+        console.log(`Player score: ${playScore}, Computer Score: ${computerScore}`);
         return `Winner rock beats scissors`;   
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        console.log(++playScore);
+        ++playScore
+        console.log(`Player score: ${playScore}, Computer Score: ${computerScore}`);
         return `Winner paper beats rock`; 
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        console.log(++playScore);
+        ++playScore
+        console.log(`Player score: ${playScore}, Computer Score: ${computerScore}`);
         return `Winner scissors beat paper`; 
     } else if (playerSelection === computerSelection) {
-        console.log(draw);
+        draw
+        console.log(`Player score: ${playScore}, Computer Score: ${computerScore}`);
         return `draw ${playerSelection} && ${computerSelection}`;
     } else { 
-        console.log(++computerScore);
+        ++computerScore
+        console.log(`Player score: ${playScore}, Computer Score: ${computerScore}`);
         return`You lose! ${computerSelection} beats ${playerSelection}`;
 }
 }
