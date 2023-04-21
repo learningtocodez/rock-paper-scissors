@@ -44,16 +44,13 @@ function playRound(playerSelection,computerSelection) {
 //play 5 round game that keeps score and reports winner or loser at the end.
 function game() {
     for (let i = 0; i < 5; i++) {
-      let playerSelection = prompt ("Rock,Paper,Scissors"); {
+      let playerSelection = prompt ("Rock,Paper,Scissors"); 
     if (playerSelection !== null) {
       playerSelection = playerSelection.toLowerCase();  
-  }
-    while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
+  } while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
       playerSelection = prompt("WARNING!! rock, paper, scissors choice only");      
-  }
-    const computerSelection = getComputerChoice();
-      console.log(playRound(playerSelection, computerSelection));
-  } 
+  } const computerSelection = getComputerChoice();
+      console.log(playRound(playerSelection, computerSelection)); 
 }
 }
 
