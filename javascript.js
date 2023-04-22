@@ -11,7 +11,6 @@ let computerScore = 0;
 // draw 
 let draw = 0; 
 
-
 //Write a function that plays a single round of rock paper scissors;
 //The function should take two parameters, playerSelection and computerSelection;
 //return a string that declares the winner of the round example: "You Lose! computerSelection beats playersSelection";
@@ -39,7 +38,6 @@ function playRound(playerSelection,computerSelection) {
 }
 }
  
-
 //write a game() function and call playRound inside.
 //play 5 round game that keeps score and reports winner or loser at the end.
 function game() {
@@ -56,6 +54,7 @@ function game() {
     } 
   }
 }   
+
 //report a winner and loser at the end.
 game();
     if (playScore > computerScore) {
