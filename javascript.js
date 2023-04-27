@@ -26,7 +26,7 @@ function playRound(playerSelection,computerSelection) {
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
       ++playScore
       console.log(`Player score: ${playScore}, Computer Score: ${computerScore}`);
-      return `Winner scissors beat paper`; 
+      return `Winner scissors beats paper`; 
   } else if (playerSelection === computerSelection) {
       draw
       console.log(`Player score: ${playScore}, Computer Score: ${computerScore}`);
